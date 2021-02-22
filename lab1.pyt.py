@@ -18,15 +18,18 @@ class Squeezer:
         Squeezer.count -= 1
         del self
 
+def main():
 
-S1 = Squeezer("white", 11, 2, "PHILIPS", 5000, 1, 3 )
-print(S1)
-S2 = Squeezer("black", 7, 1, "Haeger", 1200, 1, 2 )
-print(S2)
-
-
-  
+    S1 = Squeezer("white", 11, 2, "PHILIPS", 5000, 1, 3 )
+    print(S1)
+    S2 = Squeezer("black", 7, 1, "Haeger", 1200, 1, 2 )
+    print(S2)
 
 
-PHILIPS = Squeezer('PHILIPS')
-Haeger = Squeezer('Haeger')
+
+    PHILIPS = Squeezer('PHILIPS')
+    Haeger = Squeezer('Haeger')
+
+     
+if __name__=='__main__':
+    main()
