@@ -10,13 +10,18 @@ class Squeezer:
         self.number_of_speeds = number_of_speeds
         Squeezer.count += 1
     def __str__(self):
-        return "color:" + self.maximum_amount_of_juice + "\npower consumption: " + str(self.power_consumption) + "\nproducer:" +str(self.producer) + "\nprice:" + str(self.price) + "\nwarranty time:" + str(self.warranty_time) + "\nnumber of speeds:" + str(self.number_of_speeds)
+        return "color:" + str(self.maximum_amount_of_juice) + "\npower consumption: " + str(self.power_consumption) + "\nproducer:" +str(self.producer) + "\nprice:" + str(self.price) + "\nwarranty time:" + str(self.warranty_time) + "\nnumber of speeds:" + str(self.number_of_speeds)
         
         
         
     def __del__(self):
         Squeezer.count -= 1
         del self
+
+
+   @staticmethod
+    def get_count():
+         return Squeezer.count
 
 def main():
 
@@ -29,6 +34,8 @@ def main():
 
     PHILIPS = Squeezer('PHILIPS')
     Haeger = Squeezer('Haeger')
+   
+    print(PHILIPS, Haeger) 
 
      
 if __name__=='__main__':
